@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: webchurches/test-church
+  branch: main
+
+media_folder: "media"
+public_folder: "/media"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Content", name: "body", widget: "markdown"}
+
+  - name: "events"
+    label: "Events"  
+    folder: "content/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Event Title", name: "title", widget: "string"}
+      - {label: "Date & Time", name: "date", widget: "datetime"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Event Image", name: "image", widget: "image", required: false}
