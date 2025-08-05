@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: webchurches/test-church
+  name: git-gateway
   branch: main
-  auth_type: pkce
-  app_id: Ov23limT0ThVRI6JUTE1
 
 media_folder: "media"
 public_folder: "/media"
